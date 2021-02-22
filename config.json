@@ -1,0 +1,12 @@
+{
+    "port": 80,
+    "minecraftServers": {
+        "Velocity": { "ip": "208.89.60.196", "port": 25565 },
+        "Dev": { "ip": "208.89.60.196", "port": 25577 },
+        "Lobby": { "ip": "208.89.60.196", "port": 25588 },
+        "GameServer1": { "ip": "208.89.60.196", "port": 25599 }
+    },
+    "minecraftServerQueryRate": 10000,
+    "mongoUri": "mongodb://eft_web:tCmxMSRZh8Z61QJB@208.89.60.205:24503/eft?authSource=admin",
+    "mongoPlayerCollection": "player_stats"
+}

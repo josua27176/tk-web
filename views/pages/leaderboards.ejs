@@ -1,0 +1,183 @@
+<html>
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Escape From Tarkraft"/>
+        <title>Escape From Tarkraft</title>
+        <meta property="og:description" content="Lore and Storyline"/>
+        <meta property="og:image" content="https://joshuacote.net/assets/images/Eagle111.png"/>
+        <meta name="keywords" content="For, SEO,Optimization">
+        <meta name="author" content="Joshua Cote">
+        <link rel="shortcut icon" href="/assets/images/logoPrimary.png" type="image/png">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="/assets/css/style.css">
+    </head>
+
+    <body>
+
+        <!-- NAVBAR -->
+
+        <!-- NAVBAR MOBILE -->
+
+        <div id="mobileID" class="mobileContent-nav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeMobileNav()">&times;</a>
+            <div class="mobileContent-nav-content">
+                <a href="/" class="navMob-link">Home</a>
+                <a href="/server" class="navMob-link">Server Status</a>
+                <a href="/leaderboards" class="navMob-link">Leaderboards</a>
+                <a href="#" class="navMob-link">Join Now</a>
+            </div>
+          </div>
+
+        <!-- NAVBAR MOBILE END -->
+
+        <div class="navBar-bg">
+
+            <div class="navBar-width">
+
+                <div class="navBar-left">
+                    <img src="/assets/images/logoPrimary.png">
+                </div>
+
+                <div class="navBar-right">
+                    <a href="/" class="navBar-link">Home</a>
+                    <a href="/server" class="navBar-link">Server Status</a>
+                    <a href="/leaderboards" class="navBar-link navActive">Leaderboards</a>
+                    <a href="#" class="navBar-btn">Join Now</a>
+                    
+                    <span class="mobHam" onclick="openMobileNav()">&#9776;</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- NAVBAR END -->
+
+
+        <!-- container -->
+
+
+        <div class="topHeading">
+
+            <p class="bigHeading">Top 10 Player Profile</p>
+
+            <svg width="374" height="2" viewBox="0 0 374 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="187" cy="1" rx="187" ry="1" fill="#B90303" fill-opacity="0.88"/>
+            </svg>
+
+            <p class="smallHeading">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursur a sit amet mauris.</p>
+                
+
+        </div>
+
+        <div class="leaderboards-grid">
+
+            <% if (players.length == 0) { %>
+                <p>Could not connect to leaderboards.</p>
+            <% } else { 
+                for (let player of players) { %>
+                    <a class="gridBox-profile" href="/profile/<%= player.uuid %>">
+
+                        <div class="profileRow">
+                            <img src="https://crafatar.com/avatars/<%= player.uuid %>" class="profileImg">
+                            <div class="profileCol">
+                                <p class="playerName"><%= player.name %></p>
+                                <p class="playerUUID">UUID: <%= player.uuid %></p>
+                            </div>
+                        </div>
+        
+                        <div class="profileFlex">
+        
+                            <div class="profileInfo">
+                                <p class="profType">Player Kills</p>
+                                <p class="profNumb"><%= player.playerKills %></p>
+                            </div>
+        
+                            <div class="profileInfo">
+                                <p class="profType">Successful Raids</p>
+                                <p class="profNumb"><%= player.successfulRaids %></p>
+                            </div>
+        
+                            <div class="profileInfo">
+                                <p class="profType">Balance</p>
+                                <p class="profNumb"><%= player.balance %></p>
+                            </div>
+        
+                            <div class="profileInfo">
+                                <p class="profType">Playtime</p>
+                                <p class="profNumb"><%= player.playTime %></p>
+                            </div>
+        
+                            <div class="profileInfo">
+                                <p class="profType">Entity Kills</p>
+                                <p class="profNumb"><%= player.entityKills %></p>
+                            </div>
+                        
+                        </div>
+        
+                    </a>
+                <% } %>
+            <% } %>
+            </div>
+        </div>
+
+
+
+        <div class="bookEvent">
+
+            <div class="topHeading">
+
+                <p class="bigHeading">BOOK YOUR EVENT</p>
+    
+                <svg width="374" height="2" viewBox="0 0 374 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="187" cy="1" rx="187" ry="1" fill="#B90303" fill-opacity="0.88"/>
+                </svg>
+    
+                <p class="smallHeading">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursur a sit amet mauris.</p>
+                    
+                <a href="#" class="headingBtn">Book a event now</a>
+    
+            </div>
+
+        </div>
+
+
+        <!-- container -->
+
+
+        <!-- FOOTER -->
+
+        <div class="JCFooter">
+            <img src="/assets/images/LogoGray.png" class="footerLogo">
+            <p class="footerTitle">Get in Touch with Us</p>
+            <p class="footerDesc">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum</p>
+
+            <p class="footerCopyright">Escape from Tarkraft &copy; 2021. All Rights Reserved</p>
+            <a href="https://joshuacote.net" class="joshuacote">Made by <img src="https://joshuacote.net/copyright/cote.png"></a>
+        </div>
+        <!-- FOOTER -->
+
+
+        <!-- SCRIPT -->
+
+        <script>
+            function openMobileNav() {
+              document.getElementById("mobileID").style.width = "100%";
+            }
+            
+            function closeMobileNav() {
+              document.getElementById("mobileID").style.width = "0%";
+            }
+        </script>
+    </body>
+
+
+</html>
