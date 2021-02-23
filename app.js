@@ -7,8 +7,7 @@ const mongoose = require("mongoose");
 
 
 const defaultOptions = {
-    mp4: '',
-    webm: null,
+    mp4: 'http://d110uqcxtnt6ja.cloudfront.net/trailer1.mp4',
     poster: 'public/assets/images/header-bg.png',
     overlay: false,
     overlayColor: '#000',
