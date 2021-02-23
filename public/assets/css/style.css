@@ -297,6 +297,14 @@ a {
     margin-top: 50px;
 }
 
+.leaderboards-search {
+    outline: none;
+    padding: 8px 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 80px;
+}
+
 .GridBox-profile {
     background: #242424;
     height: 415px;

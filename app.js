@@ -38,8 +38,11 @@ app.get("/", (req, res) => {
     res.render("pages/index");
 });
 
-app.get("/profile/:uuid", async (req, res) => {
-    const player = await Player.findOne({ uuid: req.params.uuid });
+app.get("/profile/:id", async (req, res) => {
+    let player = await Player.findOne({ name: req.params.id });
+    if (player == null) {
+        player = await Player.findOne({ uuid: req.params.id });
+    }
     res.render("pages/profile", { player: player });
 });
 

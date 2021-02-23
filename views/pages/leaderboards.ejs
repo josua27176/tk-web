@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
         
         <link rel="stylesheet" href="/assets/css/style.css">
+        <script defer src="/assets/js/leaderboards.js"></script>
     </head>
 
     <body>
@@ -74,16 +75,19 @@
             </svg>
 
             <p class="smallHeading">Here is our current top 10 Players of the Official Server! </p>
-                
+
+            <br>
+
+            <% if (players.length == 0) { %>
+                <p class="smallHeading">Could not connect to leaderboards.</p>
+            <% } else { %>
+                <input type="text" class="leaderboards-search" id="search" placeholder="Search" autocomplete="off" spellcheck="false">
+            <% } %>
 
         </div>
 
-        <div class="leaderboards-grid">
-
-            <% if (players.length == 0) { %>
-                <p>Could not connect to leaderboards.</p>
-            <% } else { 
-                for (let player of players) { %>
+        <div class="leaderboards-grid" id="leaderboards-grid">
+                <% for (let player of players) { %>
                     <a class="gridBox-profile" href="/profile/<%= player.uuid %>">
 
                         <div class="profileRow">
@@ -125,7 +129,6 @@
         
                     </a>
                 <% } %>
-            <% } %>
             </div>
         </div>
 
