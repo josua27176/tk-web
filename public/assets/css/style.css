@@ -141,14 +141,14 @@ a {
 
 /* HOME PAGE */
 
-.video {
-    object-fit: cover;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
+#videoBG {
+   position:fixed;
+    z-index: -1;
+
+/*not work if the screen ratio is below 16/9*/
+    width:100%;     
+    height: auto;
+}
 
 .homeContainer-NavBar {
     background: url(/public/assets/images/header-bg.png);
