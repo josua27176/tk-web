@@ -6,26 +6,6 @@ const Player = require("./models/Player");
 const mongoose = require("mongoose");
 
 
-const defaultOptions = {
-    mp4: 'http://d110uqcxtnt6ja.cloudfront.net/trailer1.mp4',
-    poster: 'public/assets/images/header-bg.png',
-    overlay: false,
-    overlayColor: '#000',
-    overlayAlpha: 0.3
-  }
-
-  const defaultAttributes = {
-    autoplay: true,
-    controls: false,
-    loop: true,
-    muted: true,
-    playsInline: true
-  }
-
-
-var instance = new vidbg('.vidbg-box', defaultOptions, defaultAttributes);
-
-
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 
