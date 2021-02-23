@@ -151,7 +151,7 @@ a {
   }
 
 .homeContainer-NavBar {
-    background: url(/public/assets/images/trailer1.mp4);
+    background: url(/public/assets/images/header-bg.png);
     /*background: url(https://www.youtube-nocookie.com/embed/lXGakm_etN8);*/
     background-size: cover;
     background-position: top;
