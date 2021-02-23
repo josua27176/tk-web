@@ -24,7 +24,7 @@ const defaultOptions = {
   }
 
 
-var instance = new vidbg('.vidbg-box', defaultOptions, defaultAttributes)
+var instance = new vidbg('.vidbg-box', defaultOptions, defaultAttributes);
 
 
 app.use(express.static("public"));
