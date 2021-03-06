@@ -143,11 +143,11 @@ a {
 
 #myVideo {
     position: fixed;
-    min-width: 100vw;
-    min-height: 100vh;
+    min-width: 115vw;
+    min-height: 115vh;
     z-index: -100;
     object-fit: fill;
-    margin-top: -125px;
+    margin-top: -15vh;
 }
 
 .homeContainer-NavBar {
