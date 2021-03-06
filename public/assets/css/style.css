@@ -147,6 +147,7 @@ a {
     min-height: 100vh;
     z-index: -100;
     object-fit: fill;
+    margin-top: -125px;
 }
 
 .homeContainer-NavBar {
@@ -312,7 +313,6 @@ a {
 
 .GridBox-profile {
     background: #242424;
-    height: 415px;
     margin: 6px;
     width: 585px;
     border-radius: 6px;
@@ -790,4 +790,8 @@ a {
     .smModDesc {
         text-align: center;
     }
+}
+
+#countdown {
+    font-size: 2em;
 }

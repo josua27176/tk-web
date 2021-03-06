@@ -1,0 +1,41 @@
+<div class="profileRow">
+    <img src="https://crafatar.com/avatars/<%= player._id %>" class="profileImg">
+    <div class="profileCol">
+        <p class="playerName"><%= player.name %></p>
+        <p class="playerUUID">UUID: <%= player._id %></p>
+    </div>
+</div>
+
+<div class="profileFlex">
+
+    <div class="profileInfo">
+        <p class="profType">Player Kills</p>
+        <p class="profNumb"><%= player.playerKills %></p>
+    </div>
+
+    <div class="profileInfo">
+        <p class="profType">Successful Raids</p>
+        <p class="profNumb"><%= player.successfulRaids %></p>
+    </div>
+
+    <div class="profileInfo">
+        <p class="profType">Playtime</p>
+        <p class="profNumb"><%= player.playTime %> Mins</p>
+    </div>
+
+    <% const symbols = { "Dollars": "$", "Euros": "€", "Roubles": "₽" }; %>
+    <% for (let currency of player.balance) { %>
+
+        <div class="profileInfo">
+            <p class="profType"><%= currency.currency %></p>
+            <p class="profNumb"><%= symbols[currency.currency] %> <%= currency.amount %></p>
+        </div>
+
+    <% } %>
+
+    <div class="profileInfo">
+        <p class="profType">Entity Kills</p>
+        <p class="profNumb"><%= player.entityKills %></p>
+    </div>
+
+</div>

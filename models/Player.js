@@ -2,11 +2,11 @@ const mongoose = require("mongoose");
 const config = require("../config");
 
 const schema = new mongoose.Schema({
-    uuid: String,
+    _id: String,
     name: String,
     playerKills: Number,
     successfulRaids: Number,
-    balance: Number,
+    balance: Array,
     playTime: Number,
     entityKills: Number
 });

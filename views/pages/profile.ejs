@@ -32,6 +32,7 @@
                 <a href="/server" class="navMob-link">Server Status</a>
                 <a href="/leaderboards" class="navMob-link">Leaderboards</a>
                 <a href="https://store.tarkraft.com/" class="navMob-link">Store</a>
+                <a href="/launch" class="navMob-link">Launch</a>
                 <a href="https://forums.tarkraft.com/" class="navMob-link">Join Now</a>
             </div>
           </div>
@@ -51,6 +52,7 @@
                     <a href="/server" class="navBar-link">Server Status</a>
                     <a href="/leaderboards" class="navBar-link navActive">Leaderboards</a>
                     <a href="https://store.tarkraft.com/" class="navBar-link">Store</a>
+                    <a href="/launch" class="navBar-link">Launch</a>
                     <a href="https://forums.tarkraft.com/" class="navBar-btn">Join Now</a>
                     
                     <span class="mobHam" onclick="openMobileNav()">&#9776;</span>
@@ -86,45 +88,8 @@
             <div class="leaderboards-grid">
 
                 <% if (player != null) { %>
-                    <div class="gridBox-profile">
-
-                        <div class="profileRow">
-                            <img src="https://crafatar.com/avatars/<%= player.uuid %>" class="profileImg">
-                            <div class="profileCol">
-                                <p class="playerName"><%= player.name %></p>
-                                <p class="playerUUID">UUID: <%= player.uuid %></p>
-                            </div>
-                        </div>
-        
-                        <div class="profileFlex">
-        
-                            <div class="profileInfo">
-                                <p class="profType">Player Kills</p>
-                                <p class="profNumb"><%= player.playerKills %></p>
-                            </div>
-        
-                            <div class="profileInfo">
-                                <p class="profType">Successful Raids</p>
-                                <p class="profNumb"><%= player.successfulRaids %></p>
-                            </div>
-        
-                            <div class="profileInfo">
-                                <p class="profType">Balance</p>
-                                <p class="profNumb"><%= player.balance %></p>
-                            </div>
-        
-                            <div class="profileInfo">
-                                <p class="profType">Playtime</p>
-                                <p class="profNumb"><%= player.playTime %> Mins</p>
-                            </div>
-        
-                            <div class="profileInfo">
-                                <p class="profType">Entity Kills</p>
-                                <p class="profNumb"><%= player.entityKills %></p>
-                            </div>
-                        
-                        </div>
-        
+                    <div class="gridBox-profile">                    
+                        <%- include("../partials/player.ejs", { player: player }) %>
                     </div>
                 <% } else { %>
                     <p>This profile does not exist.</p>
