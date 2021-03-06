@@ -1,5 +1,5 @@
 // YYYY-MM-DDTHH:MM:SSZ
-const releaseDate = new Date("2021-03-09T19:00:00Z");
+const releaseDate = new Date("2021-03-08T19:00:00Z");
 const countdown = document.getElementById("countdown");
 
 function timer() {
