@@ -46,7 +46,7 @@ app.get("/profile/:id", async (req, res) => {
     res.render("pages/profile", { player: player });
 });
 
-app.get("/server", async (req, res) => {
+app.get("/status", async (req, res) => {
     res.render("pages/server", { queries: queries });
 });
 
