@@ -55,7 +55,7 @@ app.get("/leaderboards", async (req, res) => {
     res.render("pages/leaderboards", { players: players });
 });
 
-app.get("/launch", async (req, res) => {
+app.get("/roadmap", async (req, res) => {
     res.render("pages/comingsoon");
 });
 
