@@ -1,10 +1,10 @@
 {
     "port": 7070,
     "minecraftServers": {
-        "Velocity": { "ip": "208.89.60.196", "port": 25565 },
-        "Lobby": { "ip": "208.89.60.196", "port": 25588 },
-        "Resort": { "ip": "208.89.60.212", "port": 25611 },
-        "Factory": { "ip": "208.89.60.213", "port": 25599 }
+        "Velocity": { "ip": "10.0.0.5", "port": 25565 },
+        "Lobby": { "ip": "10.0.0.5", "port": 25588 },
+        "Resort": { "ip": "10.0.0.6", "port": 25611 },
+        "Factory": { "ip": "10.0.0.3", "port": 25599 }
     },
     "minecraftServerQueryRate": 10000,
     "mongoUri": "mongodb://eft_web:tCmxMSRZh8Z61QJB@208.89.60.205:24503/eft?authSource=admin",
