@@ -59,6 +59,13 @@ app.get("/roadmap", async (req, res) => {
     res.render("pages/comingsoon");
 });
 
+app.get("/launcher", async (req, res) => {
+    res.attachment(public/assets/launcher/TarkraftLauncher.exe)
+})
+
+app.get("/launchver", async (req, res) => {
+    res.render("public/assets/version.txt");
+});
 
 // 404
 
