@@ -61,11 +61,8 @@ app.get("/roadmap", async (req, res) => {
 
 app.get("/launcher", async (req, res) => {
     res.render(pages/launcher);
-})
-
-app.get("/launchver", async (req, res) => {
-    res.render("public/assets/version.txt");
 });
+
 
 // 404
 
