@@ -60,7 +60,7 @@ app.get("/roadmap", async (req, res) => {
 });
 
 app.get("/launcher", async (req, res) => {
-    res.render(pages/launcher);
+    res.render("pages/launcher");
 });
 
 
