@@ -60,7 +60,7 @@ app.get("/roadmap", async (req, res) => {
 });
 
 app.get("/launcher", async (req, res) => {
-    res.attachment(public/assets/launcher/TarkraftLauncher.exe)
+    res.render(pages/launcher);
 })
 
 app.get("/launchver", async (req, res) => {
