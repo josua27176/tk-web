@@ -55,8 +55,12 @@ app.get("/leaderboards", async (req, res) => {
     res.render("pages/leaderboards", { players: players });
 });
 
+app.get("/guns", async (req, res) => {
+    res.render("pages/gunchart");
+});
+
 app.get("/roadmap", async (req, res) => {
-    res.render("pages/comingsoon");
+    res.render("pages/roadmap");
 });
 
 app.get("/launcher", async (req, res) => {
